@@ -7,6 +7,16 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Check if required fields are empty
+    const name = form.current.user_name.value.trim();
+    const email = form.current.user_email.value.trim();
+    const message = form.current.message.value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all required fields (Name, Email, and Message).");
+      return; // Prevent form submission
+    }
+
     emailjs
       .sendForm(
         "service_hwble2h",
@@ -18,29 +28,26 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          alert("Message sent successfully!");
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
+          alert("Error sending message. Please try again.");
         }
       );
   };
 
   return (
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Phone Number</label>
-        <input type="number" name="number" />
-        <label>Message</label>
-        <textarea name="message" />
-        <label>Message2</label>
-        <textarea name="message2" />
-        <input type="submit" value="Send" />
-      </form>
+    <form ref={form} onSubmit={sendEmail}>
+      <input type="text" name="user_name" placeholder="Name" />
+      <input type="email" name="user_email" placeholder="Email" />
+      <input type="number" name="number" placeholder="Phone Number" />
+      <input type="text" name="subject" placeholder="Subject" />
+      <textarea name="message" placeholder="Your Message" />
+      <input type="submit" value="Send" />
+    </form>
   );
 };
 
 export default Contact;
-
