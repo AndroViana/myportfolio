@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          John Andro Viana
+          John Andro Sample
         </a>
       </header>
     </div>
