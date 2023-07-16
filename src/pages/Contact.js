@@ -14,9 +14,8 @@ const Contact = () => {
 
     if (!name || !email || !message) {
       alert("Please fill in all required fields (Name, Email, and Message).");
-      return; // Prevent form submission
+      return;
     }
-
     emailjs
       .sendForm(
         "service_hwble2h",
@@ -39,13 +38,47 @@ const Contact = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <input type="text" name="user_name" placeholder="Name" />
-      <input type="email" name="user_email" placeholder="Email" />
-      <input type="number" name="number" placeholder="Phone Number" />
-      <input type="text" name="subject" placeholder="Subject" />
-      <textarea name="message" placeholder="Your Message" />
-      <input type="submit" value="Send" />
+    <form
+      ref={form}
+      onSubmit={sendEmail}
+      className="w-96 mx-auto bg-white rounded-lg shadow-md p-8 space-y-4"
+    >
+      <input
+        type="text"
+        name="user_name"
+        placeholder="Name"
+        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+      />
+      <input
+        type="email"
+        name="user_email"
+        placeholder="Email"
+        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+      />
+      <input
+        type="number"
+        name="number"
+        placeholder="Phone Number"
+        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+      />
+      <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+        rows="4"
+      />
+      <button
+        type="submit"
+        className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+      >
+        Send
+      </button>
     </form>
   );
 };
