@@ -6,12 +6,19 @@ const Layout = () => {
   return (
     <div className="bg-white">
       <nav className="flex items-center justify-between px-8 py-4 shadow-md">
+        {/* Logo */}
         <div className="flex items-center space-x-4">
-          <img
-            src={MyImage} // Replace this with your logo image
-            alt="Logo"
-            className="h-8 w-8"
-          />
+          <img src={MyImage} alt="Logo" className="h-8 w-8" />
+          <Link
+            to="/"
+            className=" text-2xl font-bold text-gray-800 hover:text-blue-500 transition duration-300"
+          >
+            My Logo
+          </Link>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="space-x-4">
           <Link
             to="/"
             className="text-lg font-semibold text-gray-800 hover:text-blue-500 transition duration-300"
