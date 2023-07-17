@@ -3,6 +3,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/about";
+import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
-              <Route path="*" element={<NoPage />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
