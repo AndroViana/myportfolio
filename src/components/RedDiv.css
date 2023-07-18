@@ -15,7 +15,7 @@
   position: absolute;
   width: 50%;
   height: 100%;
-  background-color: red;
+  background-color: black;
   transform-origin: left; /* Set the transform origin to left for smooth opening */
   animation: curtainOpen 3s ease;
 }

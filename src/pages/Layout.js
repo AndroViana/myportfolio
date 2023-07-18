@@ -4,8 +4,8 @@ import MyImage from "../logo.svg";
 
 const Layout = () => {
   return (
-    <div className="bg-white">
-      <nav className="flex items-center justify-between px-8 py-4 shadow-md">
+    <div className="">
+      <nav className="flex items-center justify-between px-8 py-4 ">
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <img src={MyImage} alt="Logo" className="h-8 w-8" />

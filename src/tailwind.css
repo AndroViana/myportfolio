@@ -1,0 +1,26 @@
+/* tailwind.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  position: fixed;
+  top: 30vh; /* Adjust the distance from the top as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+  .icon-column {
+    flex-direction: row; /* Change the direction to horizontal for small screens */
+    top: auto; /* Reset top position for small screens */
+    bottom: 20px; /* Position the icons at the bottom */
+    right: 0; /* Adjust the distance from the right as needed */
+    justify-content: flex-end; /* Align items to the right */
+  }
+}
+
