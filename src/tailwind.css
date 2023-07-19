@@ -18,7 +18,7 @@
   .icon-column {
     flex-direction: row; /* Change the direction to horizontal for small screens */
     position: fixed; /* Keep the icons fixed on the screen */
-    bottom: -60vh; /* Position the icons at the bottom */
+    bottom: -50vh; /* Position the icons at the bottom */
     right: 50%; /* Center the icons horizontally */
     transform: translateX(50%); /* Adjust to center the icons properly */
     justify-content: center; /* Center the items horizontally */

@@ -20,7 +20,7 @@ const Layout = () => {
       <nav className="flex flex-wrap items-center justify-between px-8 py-4 ">
         {/* Logo */}
         <div className="flex items-center space-x-4">
-          <img src={MyImage} alt="Logo" className="h-8 w-8" />
+        <img src={MyImage} alt="Logo" className="h-8 w-8" />
           <Link
             to="/"
             className="text-2xl font-bold text-gray-800 hover:text-blue-500 transition duration-300"
