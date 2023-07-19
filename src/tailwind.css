@@ -17,10 +17,18 @@
 @media (max-width: 767px) {
   .icon-column {
     flex-direction: row; /* Change the direction to horizontal for small screens */
-    top: auto; /* Reset top position for small screens */
-    bottom: 20px; /* Position the icons at the bottom */
-    right: 0; /* Adjust the distance from the right as needed */
-    justify-content: flex-end; /* Align items to the right */
+    position: fixed; /* Keep the icons fixed on the screen */
+    bottom: -60vh; /* Position the icons at the bottom */
+    right: 50%; /* Center the icons horizontally */
+    transform: translateX(50%); /* Adjust to center the icons properly */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
   }
 }
+
+
+
+
+
+
 
