@@ -41,7 +41,7 @@ const Contact = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="w-96 mx-auto bg-white rounded-lg shadow-md p-8 space-y-4"
+      className="w-96 mx-auto bg-white rounded-lg shadow-md p-8 space-y-4 mt-10"
     >
       <input
         type="text"
